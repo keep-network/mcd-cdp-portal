@@ -1,4 +1,4 @@
-import { ETH, BAT } from '@makerdao/dai-plugin-mcd';
+import { ETH, BAT, TBTC } from '@makerdao/dai-plugin-mcd';
 
 export default [
   {
@@ -44,7 +44,15 @@ export default [
     gem: 'BAT',
     currency: BAT,
     networks: ['kovan', 'mainnet', 'testnet']
-  }
+  },
+  {
+    slug: 'tbtc-a', // URL param
+    symbol: 'TBTC-A', // how it's displayed in the UI
+    key: 'TBTC-A', // the actual ilk name used in the vat
+    gem: 'TBTC', // the actual asset that's being locked
+    currency: TBTC, // the associated dai.js currency type
+    networks: ['kovan', 'mainnet', 'testnet']
+  },
   // {
   //   slug: 'dgd-a',
   //   symbol: 'DGD-A',
